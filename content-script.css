@@ -1,0 +1,66 @@
+.shelf-finder {
+    z-index: 1000000 !important;
+    box-sizing: border-box !important;
+    font-family: monospace !important;
+}
+
+.shelf-finder.border {
+    border: 5px solid black !important;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+.shelf-finder.backdrop {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(34, 34, 34, 0.4) !important;
+}
+
+.shelf-finder.ui {
+    position: fixed !important;
+    left: 50px !important;
+    top: 50px !important;
+    right: 50px !important;
+    bottom: 50px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    color: black !important;
+}
+
+.shelf-finder.bar {
+    display: flex !important;
+    gap: 20px !important;
+    flex: 0 0 auto !important;
+    color: black !important;
+    font-weight: normal !important;
+}
+
+.shelf-finder.frame {
+    background-color: #f9e784 !important;
+    flex: 1 !important;
+}
+
+.shelf-finder.header {
+    background-color: #f9e784 !important;
+    padding: 15px 20px !important;
+    text-align: center !important;
+    font-size: 25px !important;
+    flex: 1 !important;
+}
+
+.shelf-finder.x {
+    background-color: #e58f65 !important;
+    font-weight: bold !important;
+    padding: 15px 25px !important;
+    cursor: pointer !important;
+    font-size: 25px !important;
+    flex: 0 0 auto !important;
+}
+
+.shelf-finder.x:hover {
+    filter: brightness(0.9) !important;
+}

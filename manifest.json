@@ -1,0 +1,21 @@
+{
+    "name": "Dublin Shelf Finder (Extension)",
+    "description": "Opens a map that helps you find your book on the library shelves.",
+    "host_permissions": ["*://*.follettdestiny.com/*"],
+    "permissions": [],
+    "icons": {
+        "128": "/icon.png"
+    },
+    "action": {
+        "default_popup": "/popup/popup.html"
+    },
+    "content_scripts": [{
+        "js": ["/content-script.js"],
+        "css": ["/content-script.css"],
+        "matches": ["*://*.follettdestiny.com/*"],
+        "run_at": "document_start",
+        "all_frames": true
+    }],
+    "version": "0.0.1",
+    "manifest_version": 3
+}
