@@ -1,0 +1,15 @@
+/* units are in terms of em for proper scaling */
+.launch-shelf-finder {
+    border: 0.2em solid #e58f65 !important;
+    background-color: #f9e784 !important;
+    padding: 1em 1.5em !important;
+    cursor: pointer !important;
+    color: black !important;
+    font-weight: bold !important;
+    margin: 0.5em 0 !important;
+    align-self: start !important;
+}
+
+.launch-shelf-finder:hover {
+    filter: brightness(0.9) !important;
+}

@@ -1,7 +1,7 @@
 .shelf-finder {
-    z-index: 1000000 !important;
     box-sizing: border-box !important;
     font-family: monospace !important;
+    z-index: 2147483647 !important;
 }
 
 .shelf-finder.border {
@@ -63,4 +63,8 @@
 
 .shelf-finder.x:hover {
     filter: brightness(0.9) !important;
+}
+
+.shelf-finder.hidden {
+    display: none !important;
 }
