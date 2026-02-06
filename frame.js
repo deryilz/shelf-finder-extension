@@ -5,7 +5,7 @@ const SELECTORS = [
 
         return !child ? null : [container, {
             callNumber: child.innerText,
-            name: elem.querySelector("img")?.alt,
+            name: elem.querySelector("img")?.alt?.trim(),
             sublocation: elem.querySelector(".sublocation-container")?.innerText,
             available: !elem.querySelector(".out"),
         }];

@@ -19,6 +19,6 @@
         "run_at": "document_end",
         "all_frames": true
     }],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "manifest_version": 3
 }
