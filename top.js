@@ -31,10 +31,18 @@ function showBookMap(info) {
     let params = new URLSearchParams();
     params.append("schoolName", schoolName);
     params.append("callNumber", info.callNumber);
-    if (info.sublocation) params.append("sublocation", info.sublocation);
 
     let rawMessage = "{} is labeled " + info.callNumber;
-    if (info.sublocation) rawMessage += " [" + info.sublocation + "]";
+
+    if (info.sublocation) {
+        params.append("sublocation", info.sublocation);
+        rawMessage += " [" + info.sublocation + "]";
+    }
+
+    if (info.author) {
+        params.append("author", info.author);
+    }
+
     let message = format(rawMessage, info.name);
 
     let url = MAP_URL + "?" + params.toString();

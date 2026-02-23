@@ -8,6 +8,7 @@ const SELECTORS = [
             name: elem.querySelector("img")?.alt?.trim(),
             sublocation: elem.querySelector(".sublocation-container")?.innerText,
             available: !elem.querySelector(".out"),
+            author: elem.querySelector(".author-name-set, .author-sec")?.innerText,
         }];
     }],
     [".cdk-dialog-container", elem => {
@@ -24,14 +25,14 @@ const SELECTORS = [
         let sublocation = find("Sublocation: ");
         let name = elem.querySelector(".clickable-book-name, .title-clamp")?.innerText;
         let available = !elem.querySelector(".out");
+        let author = elem.querySelector(".author-name-set, .author-sec")?.innerText;
 
         return [
             elem.querySelector(".channel-board"),
-            { callNumber, sublocation, name, available }
+            { callNumber, sublocation, name, available, author }
         ];
     }]
 ];
-
 
 function addButtons() {
     for (let [query, getData] of SELECTORS) {
@@ -67,28 +68,3 @@ window.addEventListener("keydown", event => {
         });
     }
 });
-
-/*
-function addOldButtons() {
-    if (hasButton(document.body)) return;
-
-    let id = document.getElementById("callNumber");
-    if (!id) return;
-
-    let rawName = document.querySelector("#titleDetail .TableHeading")?.innerText;
-
-    let summary = document.getElementById("copiesSummary");
-    let match = summary?.innerText.match(/([0-9]+) of [0-9]+/);
-    let info = {
-        callNumber: id.innerText,
-        sublocation: document.getElementById("subLocation")?.innerText,
-        name: rawName?.replace(/[\t\n]/g, ""),
-        available: !match || Number(match[1]) > 0
-    };
-
-    console.log(info);
-
-    let prev = document.getElementById("notesSummary");
-    insertButton(prev, info);
-}
-*/
